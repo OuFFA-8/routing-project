@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="text-center mb-3">
+        <h1 style="color: #2c3e50;" class="fw-bold pt-4">PORTFOLIO COMPONENT</h1>
+        <div class="ouffa ">
+            <i class="fa-solid fa-star" style="color: #2c3e50;"></i>
+        </div>
+    </div>
+
+    <div class="row g-5 pb-5">  
+        @for (image of images; track $index) {
+            <div class="col-md-4  ">
+                <div class="position-relative overflow-hidden mymove " (click)="mymethod(image)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img [src]=" image.src"alt="" class=" rounded img-fluid ">
+                    <div class="layer d-flex rounded justify-content-center align-items-center position-absolute ">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body ">
+            <img class="w-100  " src="{{image.src}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
